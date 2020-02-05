@@ -12,7 +12,7 @@ class TransactionList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 300,
+      height: 300,
       child: ListView(
         children: _transactions.map((tx) {
           return Card(
