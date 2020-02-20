@@ -9,16 +9,53 @@ import 'adaptive_flat_button.dart';
 class NewTransaction extends StatefulWidget {
   final Function _addNewTransaction;
 
-  NewTransaction(this._addNewTransaction);
+  NewTransaction(this._addNewTransaction) {
+    print(runtimeType.toString() + '.constructor');
+  }
 
   @override
-  _NewTransactionState createState() => _NewTransactionState();
+  _NewTransactionState createState() {
+    print(runtimeType.toString() + '.createState');
+    return _NewTransactionState();
+  }
 }
 
 class _NewTransactionState extends State<NewTransaction> {
   final _titleController = TextEditingController();
   final _amountController = TextEditingController();
   DateTime _selectedDate = DateTime.now();
+
+
+  _NewTransactionState() {
+    print(runtimeType.toString() + '.constructor()');
+  }
+
+  @override
+  void initState() {
+    print(runtimeType.toString() + '.initState()');
+    super.initState();
+  }
+
+
+  @override
+  void didUpdateWidget(NewTransaction oldWidget) {
+    print(runtimeType.toString() + '.didUpdateWidget()');
+    super.didUpdateWidget(oldWidget);
+  }
+
+
+  @override
+  void dispose() {
+    print(runtimeType.toString() + '.dispose()');
+    super.dispose();
+  }
+
+
+  @override
+  void deactivate() {
+    print(runtimeType.toString() + '.deactivate()');
+    super.deactivate();
+  }
 
   void _submitData() {
     final inputTitle = _titleController.text;

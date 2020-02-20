@@ -29,7 +29,7 @@ class AdaptiveFlatButton extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            onPressed: () => handler,
+            onPressed: handler,
           );
   }
 }
