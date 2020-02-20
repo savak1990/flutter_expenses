@@ -122,7 +122,7 @@ class _MyHomePageState extends State<MyHomePage> {
       style: TextStyle(fontFamily: 'OpenSans'),
     );
 
-    final ObstructingPreferredSizeWidget appBar = Platform.isIOS
+    final PreferredSizeWidget appBar = Platform.isIOS
         ? CupertinoNavigationBar(
             middle: title,
             trailing: Row(
